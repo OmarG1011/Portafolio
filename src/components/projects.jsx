@@ -6,12 +6,12 @@ import canv from "../assets/uu.png"
 import { ProjectCard } from "./tarjeta"
 export function Projects() {
     return (
-        <div className="container-fluid d-flex align-items-center mibg" id="projects">
+        <div className="container-fluid d-flex align-items-center mibg pt-5" id="projects">
             <div className="row w-100 h-100 d-flex justify-content-center">
                 <div className="text-center d-flex align-items-center justify-content-center text-white p-5">
                     <h2>Proyectos</h2>
                 </div>
-                <div className="col-lg-5 col-md-5 d-flex flex-column justify-content-center text-white">
+                <div className="col-lg-4 col-md-4 d-flex flex-column justify-content-center text-white">
                     <ProjectCard
                         title="Informacion de Películas"
                         description="Página creada con React y API de TheMovieDB para ver información de películas."
@@ -19,7 +19,7 @@ export function Projects() {
                         projectUrl="https://22-peliculas-reactjs.netlify.app/"
                     />
                 </div>
-                <div className="col-lg-5 col-md-5 d-flex flex-column justify-content-center text-white">
+                <div className="col-lg-4 col-md-4 d-flex flex-column justify-content-center text-white">
                     <ProjectCard
                         title="Gestión de Citas Médicas"
                         description="Sistema CRUD con verificación de usuarios y contraseña."
@@ -27,7 +27,7 @@ export function Projects() {
                         projectUrl="http://citasmedicas.infinityfreeapp.com/"
                     />
                 </div>
-                <div className="col-lg-5 col-md-5 d-flex flex-column justify-content-center text-white">
+                <div className="col-lg-4 col-md-4 d-flex flex-column justify-content-center text-white">
                     <ProjectCard
                         title="Canvas"
                         description="Canvas de solicitud y organizacion de proyectos."
