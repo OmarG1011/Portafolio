@@ -22,7 +22,7 @@ export function Projects() {
                 <div className="col-lg-4 col-md-4 d-flex flex-column justify-content-center text-white">
                     <ProjectCard
                         title="Gestión de Citas Médicas"
-                        description="Sistema CRUD con verificación de usuarios y contraseña."
+                        description="Sistema CRUD creado con php y boostrap con verificación de usuarios y contraseña."
                         imageUrl={crud}
                         projectUrl="http://citasmedicas.infinityfreeapp.com/"
                     />
