@@ -11,29 +11,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.navbar-nav .nav-link {
-  transition: all 0.3s ease-in-out; /* Suaviza la transición */
-  position: relative;
+/* Aplicar la fuente a todo el body */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;  /* Tamaño de fuente base */
+  line-height: 1.5; /* Altura de línea para una mejor legibilidad */
+  color: #333; /* Color de texto oscuro */
 }
 
-.navbar-nav .nav-link:hover {
-  color: #00ccff !important; /* Cambia el color del texto al pasar el mouse */
-}
-
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #00ccff; /* Línea de color amarillo */
-  bottom: 0;
-  left: 50%;
-  transition: all 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%; /* Expande la línea al pasar el mouse */
+/* Ejemplo de estilos personalizados para un título */
+h1 {
+  font-size: 2rem;
+  font-weight: 500; /* Peso de la fuente para que sea más pesado */
+  color: #f7f9f7;  /* Cambiar el color a verde */
 }
 
 .mibg{
@@ -42,4 +32,10 @@
 
 .text-morado {
   color: rgb(110 43 245); /* Código de color morado */
+}
+.circular-image {
+  width: 400px; /* Tamaño de la imagen (ajústalo a tu necesidad) */
+  height: 400px; /* Tamaño de la imagen (debe ser el mismo valor para crear el círculo) */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente dentro del círculo */
 }

@@ -17,3 +17,11 @@
 .mirrored-image {
   transform: scaleX(-1); /* Voltear la imagen horizontalmente */
 }
+
+i {
+  transition: transform 0.1s ease-in-out; /* Transición suave */
+}
+
+i:hover {
+  transform: scale(1.5); /* Aumenta el tamaño al 120% */
+}

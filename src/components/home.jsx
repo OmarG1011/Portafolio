@@ -1,64 +1,70 @@
 import "./home.css"
 import { Projects } from "./projects";
 import { SKILL } from "./skill";
-import cv from "../assets/foto_cv.png"
+import cv from "../assets/1.png";
+import Dock from './Dock'; // Importar el componente Dock
+import { VscBriefcase, VscCallOutgoing, VscAccount, VscChecklist } from 'react-icons/vsc'; // Importar los iconos de React Icons
 
-
-function Navbar() {
-    return (
-        <nav className="navbar bg-dark fixed-top">
-            <div className="container">
-                <ul className="navbar-nav d-flex flex-row justify-content-center w-100">
-                    <li className="nav-item mx-3">
-                        <a className="nav-link text-white" href="#Home">Sobre Mi</a>
-                    </li>
-                    <li className="nav-item mx-3">
-                        <a className="nav-link text-white" href="#skill">Habilidades</a>
-                    </li>
-                    <li className="nav-item mx-3">
-                        <a className="nav-link text-white" href="#projects">Proyectos</a>
-                    </li>
-                    <li className="nav-item mx-3">
-                        <a className="nav-link text-white" href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    );
-}
 
 export function HOME() {
+    const items = [
+        { icon: <VscAccount size={18} />, label: 'Sobre mi', targetId: "Home" },
+        { icon: <VscChecklist size={18} />, label: 'Habilidades', targetId: "skill" },
+        { icon: <VscBriefcase size={18} />, label: 'Proyectos', targetId: "projects" },
+        { icon: <VscCallOutgoing size={18} />, label: 'Contacto', targetId: "contact" },
+    ];
+
     return (
         <>
-            <Navbar />
-            <div className="container-fluid d-flex align-items-center vh-100  mibg " id="Home">
-                <div className="row w-100 h-100">
-                    <div className="col-md-6 d-flex flex-column justify-content-center p-5 text-white slide-in">
-                        <h1>Oscar Ortega</h1>
-                        <h2>Desarrollador Web Junior</h2>
-                        <p>
-                            Apasionado por la creación de aplicaciones web dinámicas y eficientes, con un enfoque en el diseño responsivo y la optimización del rendimiento. Me especializo en el desarrollo de sitios y sistemas interactivos, integrando bases de datos con SQL Server para manejar información de manera estructurada y segura. Tengo conocimientos en Bootstrap para mejorar la experiencia de usuario y en la implementación de CRUDs para la gestión de datos. Siempre estoy en constante aprendizaje y en búsqueda de nuevos desafíos que me permitan mejorar mis habilidades y aportar soluciones innovadoras.
-                        </p>
+            <Dock
+                items={items}
+                panelHeight={80}
+                baseItemSize={60}
+                magnification={90}
+                distance={250}
+            />
+            <div className="container-fluid min-vh-100 d-flex flex-column mibg " id="Home">
+                <div className="row flex-grow-1 slide-in">
+
+                    <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                        <div className="text-white p-3">
+                            <h1>Oscar Ortega</h1>
+                            <h2>Desarrollador Web Junior</h2>
+                            <p>
+                                Apasionado por la creación de aplicaciones web dinámicas y eficientes, con un enfoque en el diseño responsivo y la optimización del rendimiento. Me especializo en el desarrollo de sitios y sistemas interactivos, integrando bases de datos con SQL Server para manejar información de manera estructurada y segura. Tengo conocimientos en Bootstrap para mejorar la experiencia de usuario y en la implementación de CRUDs para la gestión de datos. Siempre estoy en constante aprendizaje y en búsqueda de nuevos desafíos que me permitan mejorar mis habilidades y aportar soluciones innovadoras.
+                            </p>
+                        </div>
                     </div>
-                    <div className="col-md-6 d-flex align-items-center justify-content-center slide-in ">
-                        <img src={cv} alt="Oscar Ortega" className="img-fluid rounded-circle mirrored-image" style={{ maxWidth: "80%" }} />
+
+                    <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                        <div className="text-white p-3 ">
+                            <img src={cv} alt="Oscar Ortega" className="img-fluid h-50 rounded-circle mirrored-image " />
+                        </div>
                     </div>
                 </div>
             </div>
+
             <SKILL />
             <Projects />
-            <div className="container-fluid d-flex align-items-center vh-100  mibg" id="contact">
-                <div className="row w-100 h-100">
-                    <div className="text-center d-flex align-items-center justify-content-center text-white">
-                        <h3>Contacto</h3>
+            <div className="container-fluid min-vh-100 d-flex flex-column mibg" id="contact">
+
+                <div className="row flex-fill">
+                    <div className="col-12 d-flex justify-content-center align-items-center">
+                        <div className="text-white ">
+                            <h3>Contacto</h3>
+                        </div>
                     </div>
-                    <div className="d-flex justify-content-center gap-4 ">
-                        <a href="https://github.com/OmarG1011" target="_blank">
-                            <i className="fa-brands fa-github fa-3x text-white"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/oscar-omar-ortega-gonzalez-6247b2301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                            <i className="fa-brands fa-linkedin fa-3x text-primary"></i>
-                        </a>
+                </div>
+                <div className="row flex-fill">
+                    <div className="col-12 d-flex justify-content-center align-items-start">
+                        <div className="text-white ">
+                            <a href="https://github.com/OmarG1011" target="_blank">
+                                <i className="fa-brands mx-3 fa-github fa-3x text-white"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/oscar-omar-ortega-gonzalez-6247b2301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                                <i className="fa-brands mx-3 fa-linkedin fa-3x text-primary"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
