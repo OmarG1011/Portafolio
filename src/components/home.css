@@ -13,3 +13,7 @@
 .slide-in {
   animation: slideIn 1s ease-out;
 }
+
+.mirrored-image {
+  transform: scaleX(-1); /* Voltear la imagen horizontalmente */
+}

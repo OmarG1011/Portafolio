@@ -1,6 +1,8 @@
 import "./home.css"
 import { Projects } from "./projects";
 import { SKILL } from "./skill";
+import cv from "../assets/foto_cv.png"
+
 
 function Navbar() {
     return (
@@ -38,26 +40,28 @@ export function HOME() {
                             Apasionado por la creación de aplicaciones web dinámicas y eficientes, con un enfoque en el diseño responsivo y la optimización del rendimiento. Me especializo en el desarrollo de sitios y sistemas interactivos, integrando bases de datos con SQL Server para manejar información de manera estructurada y segura. Tengo conocimientos en Bootstrap para mejorar la experiencia de usuario y en la implementación de CRUDs para la gestión de datos. Siempre estoy en constante aprendizaje y en búsqueda de nuevos desafíos que me permitan mejorar mis habilidades y aportar soluciones innovadoras.
                         </p>
                     </div>
-                    <div className="col-md-6 d-flex align-items-center justify-content-center slide-in">
-                        <img src="URL_DE_TU_IMAGEN" alt="Oscar Ortega" className="img-fluid rounded-circle" style={{ maxWidth: "80%" }} />
+                    <div className="col-md-6 d-flex align-items-center justify-content-center slide-in ">
+                        <img src={cv} alt="Oscar Ortega" className="img-fluid rounded-circle mirrored-image" style={{ maxWidth: "80%" }} />
                     </div>
                 </div>
-            </div>  
+            </div>
             <SKILL />
             <Projects />
             <div className="container-fluid d-flex align-items-center vh-100  mibg" id="contact">
-            <div className="row w-100 h-100">
-                <div className="text-center d-flex align-items-center justify-content-center text-white">
-                    <h3>Contacto</h3>
-                </div>
-                <div className="d-flex justify-content-center gap-4 ">
-                <a href="https://github.com/OmarG1011" target="_blank">
-                <i className="fa-brands fa-github fa-3x text-white"></i>
-                </a>
-                    <i className="fa-brands fa-linkedin fa-3x text-primary"></i>
+                <div className="row w-100 h-100">
+                    <div className="text-center d-flex align-items-center justify-content-center text-white">
+                        <h3>Contacto</h3>
+                    </div>
+                    <div className="d-flex justify-content-center gap-4 ">
+                        <a href="https://github.com/OmarG1011" target="_blank">
+                            <i className="fa-brands fa-github fa-3x text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/oscar-omar-ortega-gonzalez-6247b2301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                            <i className="fa-brands fa-linkedin fa-3x text-primary"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         </>
     )
 }
