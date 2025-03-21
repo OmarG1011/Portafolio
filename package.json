@@ -1,6 +1,7 @@
 {
   "name": "portafolio_personal--",
   "private": true,
+  "homepage": "https://omarg1011.github.io/Portafolio", 
   "version": "0.0.0",
   "type": "module",
   "scripts": {
