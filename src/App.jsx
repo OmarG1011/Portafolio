@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div id="home" className="section min-h-screen flex flex-col items-center justify-center bg-black text-[var(--color-mako-50)] text-center">
       <motion.img
-        src="/foto_cv.png"
+        src="https://omarg1011.github.io/Portafolio/foto_cv.png"
         alt="Foto de Omar"
         className="w-60 h-60 object-cover rounded-full mb-4 shadow-lg"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -70,35 +70,35 @@ const Projects = () => {
             id: 1,
             title: "Aplicacion Pokemon",
             description: "Este proyecto es una aplicación web desarrollada en React.js que permite visualizar una lista de Pokémon utilizando la Pokémon API.",
-            image: "/5.png",
+            image: "https://omarg1011.github.io/Portafolio/5.png",
             link: "https://omarg1011.github.io/Proyecto_Pokemon/"
           },
           {
             id: 2,
             title: "Login",
             description: "Este proyecto es una implementación de un sistema de autenticación con Firebase Authentication en una aplicación React.js. Permite a los usuarios registrarse, iniciar sesión y cerrar sesión utilizando correo y contraseña.",
-            image: "/6.png",
+            image: "https://omarg1011.github.io/Portafolio/6.png",
             link: "https://omarg1011.github.io/Login_firebase/"
           },
           {
             id: 3,
             title: "Canva",
             description: "Canvas de solicitud y organizacion de proyectos.",
-            image: "/uu.png",
+            image: "https://omarg1011.github.io/Portafolio/uu.png",
             link: "https://33-canvaa.netlify.app/"
           },
           {
             id: 4,
             title: "Dashboard Admin",
             description: "Sistema CRUD creado con php y boostrap con verificación de usuarios y contraseña.",
-            image: "/CRUD.jpg",
+            image: "https://omarg1011.github.io/Portafolio/CRUD.jpg",
             link: "http://citasmedicas.infinityfreeapp.com/?i=1"
           },
           {
             id: 5,
             title: "Pelicula",
             description: "Página creada con React y API de TheMovieDB para ver información de películas.",
-            image: "/pelicula.png",
+            image: "https://omarg1011.github.io/Portafolio/pelicula.png",
             link: "https://22-peliculas-reactjs.netlify.app/"
           }
         ].map((project) => (
