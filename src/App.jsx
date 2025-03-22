@@ -21,6 +21,14 @@ const Home = () => {
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className="text-xl">
         Desarrollador web
       </motion.p>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="flex text-center space-x-4 pt-5">
+        <a href="https://github.com/OmarG1011" target="_blank">
+          <i className="fa-brands fa-github fa-3x text-white"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/oscar-omar-ortega-gonzalez-6247b2301" target="_blank">
+          <i className="fa-brands fa-linkedin fa-3x text-primary"></i>
+        </a>
+      </motion.div>
     </div>
   );
 };
@@ -28,7 +36,7 @@ const Home = () => {
 
 const About = () => {
   return (
-    <div id="about" className="section min-h-screen flex flex-col items-center justify-center bg-black text-[var(--color-mako-50)] text-justify p-8">
+    <div id="about" className="section min-h-screen  flex flex-col items-center  bg-black text-[var(--color-mako-50)] text-justify p-8">
       <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="text-3xl font-semibold mb-4 ">
         Sobre mí
       </motion.h2>
@@ -49,7 +57,7 @@ const About = () => {
           ].map(({ icon: Icon, name }, index) => (
             <li key={index} className="bg-[var(--color-mako-900)] p-4 rounded-lg flex items-center justify-center gap-2 shadow-lg">
               <Icon size={30} />
-              <span className="text-[var(--color-mako-100)]">{name}</span>
+              <span className="hidden sm:inline text-[var(--color-mako-100)]">{name}</span>
             </li>
           ))}
         </ul>
@@ -60,11 +68,11 @@ const About = () => {
 
 const Projects = () => {
   return (
-    <div id="projects" className="section min-h-screen flex flex-col items-center justify-center bg-black text-[var(--color-mako-50)] text-center p-8">
+    <div id="projects" className="section min-h-screen flex flex-col items-center justify-center bg-black text-[var(--color-mako-50)] text-center p-10 mb-8">
       <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="text-3xl font-semibold mb-6">
         Mis Proyectos
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {[
           {
             id: 1,
@@ -73,13 +81,13 @@ const Projects = () => {
             image: "https://omarg1011.github.io/Portafolio/imagenes/5.png",
             link: "https://omarg1011.github.io/Proyecto_Pokemon/"
           },
-          {
-            id: 2,
-            title: "Login",
-            description: "Este proyecto es una implementación de un sistema de autenticación con Firebase Authentication en una aplicación React.js. Permite a los usuarios registrarse, iniciar sesión y cerrar sesión utilizando correo y contraseña.",
-            image: "https://omarg1011.github.io/Portafolio/imagenes/6.png",
-            link: "https://omarg1011.github.io/Login_firebase/"
-          },
+          // {
+          //   id: 2,
+          //   title: "Login",
+          //   description: "Este proyecto es una implementación de un sistema de autenticación con Firebase Authentication en una aplicación React.js. Permite a los usuarios registrarse, iniciar sesión y cerrar sesión utilizando correo y contraseña.",
+          //   image: "https://omarg1011.github.io/Portafolio/imagenes/6.png",
+          //   link: "https://omarg1011.github.io/Login_firebase/"
+          // },
           {
             id: 3,
             title: "Canva",
@@ -125,34 +133,12 @@ const Projects = () => {
   );
 };
 
-const Contact = () => {
-  return (
-    <div id="contact" className="section min-h-screen flex flex-col items-center justify-center bg-black text-[var(--color-mako-50)] text-center p-8">
-      <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="text-3xl font-semibold mb-6">
-        Contacto
-      </motion.h2>
-      <div className="row flex-fill pt-30">
-        <div className="col-12 d-flex justify-content-center align-items-start">
-          <div className="text-white ">
-            <a href="https://github.com/OmarG1011" target="_blank">
-              <i className="fa-brands mx-3 fa-github fa-3x text-white"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/oscar-omar-ortega-gonzalez-6247b2301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-              <i className="fa-brands mx-3 fa-linkedin fa-3x text-primary"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 function App() {
   const items = [
     { icon: <VscAccount size={18} />, label: 'Sobre mí', targetId: 'home' },
     { icon: <VscChecklist size={18} />, label: 'Habilidades', targetId: 'about' },
     { icon: <VscBriefcase size={18} />, label: 'Proyectos', targetId: 'projects' },
-    { icon: <VscCallOutgoing size={18} />, label: 'Contacto', targetId: 'contact' },
   ];
 
   return (
@@ -161,7 +147,6 @@ function App() {
       <Home />
       <About />
       <Projects />
-      <Contact />
     </div>
   );
 }
