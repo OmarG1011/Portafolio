@@ -108,6 +108,13 @@ const Projects = () => {
             description: "Página creada con React y API de TheMovieDB para ver información de películas.",
             image: "https://omarg1011.github.io/Portafolio/imagenes/pelicula.png",
             link: "https://22-peliculas-reactjs.netlify.app/"
+          },
+          {
+            id: 6,
+            title: "Hotel Paradise",
+            description: "Página creada con React y API de TheMovieDB para ver información de películas.",
+            image: "https://omarg1011.github.io/Portafolio/imagenes/7.png",
+            link: "https://hotelpardise.netlify.app/"
           }
         ].map((project) => (
           <a
