@@ -112,7 +112,7 @@ const Projects = () => {
           {
             id: 6,
             title: "Hotel Paradise",
-            description: "Página creada con React y API de TheMovieDB para ver información de películas.",
+            description: "Aplicación web creada con React y Vite para gestionar reservas. Utiliza Firebase Authentication para el login y Firestore para almacenar reservas en tiempo real. Diseño responsivo con Bootstrap y gestión de reservas mediante modales.",
             image: "https://omarg1011.github.io/Portafolio/imagenes/7.png",
             link: "https://hotelpardise.netlify.app/"
           }
