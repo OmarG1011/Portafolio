@@ -115,6 +115,12 @@ const Projects = () => {
             description: "Aplicación web creada con React y Vite para gestionar reservas. Utiliza Firebase Authentication para el login y Firestore para almacenar reservas en tiempo real. Diseño responsivo con Bootstrap y gestión de reservas mediante modales.",
             image: "https://omarg1011.github.io/Portafolio/imagenes/7.png",
             link: "https://hotelpardise.netlify.app/"
+          },{
+            id: 7,
+            title: "InstaClon",
+            description: "Instaclón: una red social para compartir fotos, creada con React, Vite, Bootstrap y Supabase. Rápida, moderna y lista para mostrar tus mejores momentos.",
+            image: "https://omarg1011.github.io/Portafolio/imagenes/8.png",
+            link: "https://omarg1011.github.io/Instaclon/"
           }
         ].map((project) => (
           <a
